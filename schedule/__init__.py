@@ -259,7 +259,7 @@ class Job:
         PeriodicJobs are sortable based on the scheduled time they
         run next.
         """
-        return self.next_run < other.next_run
+        return self.next_run > other.next_run
 
     def __str__(self) -> str:
         if hasattr(self.job_func, "__name__"):
